@@ -9,3 +9,10 @@ spring:
     default-property-inclusion: non_null
   messages:
     basename: i18n/messages
+infra:
+  docker:
+    host: unix:///var/run/docker.sock
+ctrzit:
+  version: 0.0.1
+  upload-path: uploads
+  download-path: /attachments

@@ -19,6 +19,7 @@
         <module>ctrzit-common</module>
         <module>ctrzit-framework</module>
         <module>ctrzit-system</module>
+        <module>ctrzit-infra</module>
     </modules>
 
     <properties>
@@ -73,6 +74,11 @@
                 <artifactId>docker-java</artifactId>
                 <version>${docker.java.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.docker-java</groupId>
+                <artifactId>docker-java-transport-httpclient5</artifactId>
+                <version>${docker.java.version}</version>
+            </dependency>
             <!-- Common Module -->
             <dependency>
                 <groupId>com.github.pondhia</groupId>
@@ -95,6 +101,12 @@
             <dependency>
                 <groupId>com.github.pondhia</groupId>
                 <artifactId>ctrzit-api</artifactId>
+                <version>${ctrzit.version}</version>
+            </dependency>
+            <!-- Infra Module -->
+            <dependency>
+                <groupId>com.github.pondhia</groupId>
+                <artifactId>ctrzit-infra</artifactId>
                 <version>${ctrzit.version}</version>
             </dependency>
         </dependencies>

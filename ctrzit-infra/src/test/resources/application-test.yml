@@ -1,0 +1,7 @@
+infra:
+  docker:
+    host: unix:///var/run/docker.sock
+ctrzit:
+  version: 0.0.1
+  upload-path: uploads
+  download-path: /attachments
