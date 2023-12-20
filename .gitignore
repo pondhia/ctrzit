@@ -33,3 +33,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Logs ###
+logs/
+
+### Development Configuration ###
+application-dev.yml

@@ -14,10 +14,105 @@
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>ctrzit-api</module>
+        <module>ctrzit-common</module>
+        <module>ctrzit-framework</module>
+        <module>ctrzit-system</module>
+    </modules>
+
     <properties>
+        <ctrzit.version>${version}</ctrzit.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <fastjson.version>2.0.43</fastjson.version>
+        <mybatis-plus.version>3.5.4.1</mybatis-plus.version>
+        <mysql.connector.version>8.0.33</mysql.connector.version>
+        <druid.version>1.2.20</druid.version>
+        <docker.java.version>3.3.4</docker.java.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBoot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.7.18</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Fastjson2 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!-- Mybatis Plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!-- MySQL Connector -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+            <!-- Druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- Docker Java -->
+            <dependency>
+                <groupId>com.github.docker-java</groupId>
+                <artifactId>docker-java</artifactId>
+                <version>${docker.java.version}</version>
+            </dependency>
+            <!-- Common Module -->
+            <dependency>
+                <groupId>com.github.pondhia</groupId>
+                <artifactId>ctrzit-common</artifactId>
+                <version>${ctrzit.version}</version>
+            </dependency>
+            <!-- Framework Module -->
+            <dependency>
+                <groupId>com.github.pondhia</groupId>
+                <artifactId>ctrzit-framework</artifactId>
+                <version>${ctrzit.version}</version>
+            </dependency>
+            <!-- System Module -->
+            <dependency>
+                <groupId>com.github.pondhia</groupId>
+                <artifactId>ctrzit-system</artifactId>
+                <version>${ctrzit.version}</version>
+            </dependency>
+            <!-- API Module -->
+            <dependency>
+                <groupId>com.github.pondhia</groupId>
+                <artifactId>ctrzit-api</artifactId>
+                <version>${ctrzit.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

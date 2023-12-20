@@ -1,0 +1,11 @@
+server:
+  port: 3625
+logging:
+  level:
+    com.github.pondhia.ctrzit: debug
+    org.springframework: warn
+spring:
+  jackson:
+    default-property-inclusion: non_null
+  messages:
+    basename: i18n/messages

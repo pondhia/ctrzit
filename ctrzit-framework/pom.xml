@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.pondhia</groupId>
+        <artifactId>ctrzit</artifactId>
+        <version>0.0.1-DEV</version>
+    </parent>
+
+    <artifactId>ctrzit-framework</artifactId>
+
+    <description>
+        Framework Module
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.pondhia</groupId>
+            <artifactId>ctrzit-system</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-commons</artifactId>
+            <version>1.10.0-RC1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>
